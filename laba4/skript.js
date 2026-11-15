@@ -68,3 +68,71 @@ document.getElementById("themeToggle").addEventListener("click", () => {
   applyTheme(current === "dark" ? "light" : "dark");
 });
 
+// ===== Зміна вигляду для лабораторної №5: чорно-рожева тема =====
+document.title = "Резюме - Шайда Олеся-Анастасія (лаб. №5)";
+
+const style = document.createElement("style");
+style.textContent = `
+  body {
+    background: linear-gradient(135deg, #000000 0%, #1a0010 45%, #ff2e93 130%) fixed !important;
+    color: #ffe6f2 !important;
+    font-family: "Segoe UI", Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    border-top: 8px solid;
+    border-image: linear-gradient(90deg, #ff2e93, #000000, #ff2e93) 1;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255,46,147,.35), rgba(0,0,0,.6));
+    box-shadow: 0 0 25px rgba(255,46,147,.4);
+  }
+  h1 {
+    margin: 0 0 6px;
+    background: linear-gradient(90deg, #ffffff, #ff6fb5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  h2 {
+    color: #ff6fb5;
+    border-bottom: 2px solid #ff2e93;
+    padding-bottom: 4px;
+  }
+  section, footer {
+    background: rgba(0,0,0,.45);
+    border: 1px solid rgba(255,46,147,.35);
+    border-radius: 14px;
+    padding: 6px 20px 14px;
+    margin: 18px 0;
+  }
+  .card {
+    background: rgba(255,46,147,.12) !important;
+    border: 1px solid rgba(255,46,147,.4);
+    color: #ffe6f2 !important;
+  }
+  a { color: #ff8ec6 !important; }
+  button {
+    background: linear-gradient(90deg, #ff2e93, #b3005e);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+  }
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(255,46,147,.8);
+  }
+  .modal-content {
+    background: #0d0007 !important;
+    color: #ffe6f2 !important;
+    border: 1px solid #ff2e93;
+    box-shadow: 0 0 30px rgba(255,46,147,.5);
+  }
+`;
+document.head.appendChild(style);
