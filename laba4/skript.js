@@ -73,6 +73,7 @@ document.title = "Резюме - Шайда Олеся-Анастасія (ла�
 
 const style = document.createElement("style");
 style.textContent = `
+  /* ---- Темна тема (чорно-рожева) ---- */
   body {
     background: linear-gradient(135deg, #000000 0%, #1a0010 45%, #ff2e93 130%) fixed !important;
     color: #ffe6f2 !important;
@@ -133,6 +134,35 @@ style.textContent = `
     color: #ffe6f2 !important;
     border: 1px solid #ff2e93;
     box-shadow: 0 0 30px rgba(255,46,147,.5);
+  }
+
+  /* ---- Світла тема (біло-рожева) ---- */
+  [data-theme="light"] body {
+    background: linear-gradient(135deg, #ffffff 0%, #ffd6ea 55%, #ff8ec6 130%) fixed !important;
+    color: #2a0017 !important;
+  }
+  [data-theme="light"] header {
+    background: linear-gradient(135deg, rgba(255,46,147,.3), rgba(255,255,255,.7));
+  }
+  [data-theme="light"] h1 {
+    background: linear-gradient(90deg, #2a0017, #ff2e93);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  [data-theme="light"] h2 { color: #c4006a; }
+  [data-theme="light"] section,
+  [data-theme="light"] footer {
+    background: rgba(255,255,255,.65);
+  }
+  [data-theme="light"] .card {
+    background: rgba(255,46,147,.12) !important;
+    color: #2a0017 !important;
+  }
+  [data-theme="light"] a { color: #c4006a !important; }
+  [data-theme="light"] .modal-content {
+    background: #ffffff !important;
+    color: #2a0017 !important;
   }
 `;
 document.head.appendChild(style);
