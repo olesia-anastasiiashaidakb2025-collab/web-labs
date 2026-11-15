@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Шайда Олеся-Анастасія</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --bg:#ffffff; --text:#222222; --card:#f2f2f2; }
+        [data-theme="dark"] { --bg:#1b1b1f; --text:#eeeeee; --card:#2c2c33; }
+        body { background:var(--bg); color:var(--text); transition:.3s; }
+        a { color: inherit; }
+        .card { background:var(--card); padding:10px; margin:10px 0; border-radius:8px; }
+        .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6);
+                 align-items:center; justify-content:center; }
+        .modal.open { display:flex; }
+        .modal-content { background:var(--bg); color:var(--text); padding:20px;
+                         border-radius:10px; width:320px; }
+        .modal-content input, .modal-content textarea { width:100%; margin-bottom:8px; box-sizing:border-box; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Шайда Олеся-Анастасія</h1>
+        <p>Студентка</p>
+        <button id="themeToggle"> Тема</button>
+    </header>
+
+    <main>
+        <section>
+            <h2>Досвід роботи</h2>
+            <ul>
+                <li>
+                    <strong>Студентка</strong>
+                    <p>Досвід роботи: немає</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <ul>
+                <li>
+                    <strong>Національний університет "Львівська політехніка"</strong>
+                    <p>Спеціальність "Кібербезпека", 2 курс.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Навички</h2>
+            <ul>
+                <li>Розробка Python,C# скриптів</li>
+                <li>OSINT</li>
+                <li>Промпт-інжиніринг</li>
+                <li>Високі soft skills</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Відгуки роботодавців</h2>
+            <div id="reviews"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Місто: Львів</p>
+        <p>Email: <a href="mailto:olesia-anastasiia.shaida.kb.2025@lpnu.ua">olesia-anastasiia.shaida.kb.2025@lpnu.ua</a></p>
+        <h3>Інформація про систему</h3>
+        <ul id="storageInfo"></ul>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3>Зворотний зв'язок</h3>
+            <form action="https://formspree.io/f/mljjnvop" method="POST">
+                <input type="text" name="name" placeholder="Ім'я" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону">
+                <textarea name="message" rows="4" placeholder="Повідомлення"></textarea>
+                <button type="submit">Надіслати</button>
+                <button type="button" id="closeModal">Закрити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="skript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
