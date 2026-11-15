@@ -45,7 +45,7 @@ const modal = document.getElementById("modal");
 
 setTimeout(() => {
   modal.classList.add("open");
-}, 3000);
+}, 60000);
 
 document.getElementById("closeModal").addEventListener("click", () => {
   modal.classList.remove("open");
@@ -67,3 +67,7 @@ document.getElementById("themeToggle").addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
   applyTheme(current === "dark" ? "light" : "dark");
 });
+
+// ===== Зміна вигляду для лабораторної №5 =====
+document.body.style.borderTop = "10px solid #4f8cff";
+document.title = "Резюме - Шайда Олеся-Анастасія (лаб. №5)";
